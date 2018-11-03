@@ -5,6 +5,7 @@ class CreateUserErrors < ActiveRecord::Migration[5.2]
       t.string :line_number
     	t.string :file
       t.string :stack_url
+      t.integer :session_id
       t.timestamps
     end
   end

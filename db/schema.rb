@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_060034) do
     t.string "line_number"
     t.string "file"
     t.string "stack_url"
+    t.integer "session_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
