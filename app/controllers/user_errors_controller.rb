@@ -32,7 +32,11 @@ class UserErrorsController < ApplicationController
 
   # DELETE /user_errors/1
   def destroy
-    @user_error.destroy
+    @user_error.where(session_id: params[:session_id]).destroy_all
+  end
+
+  def destroy_all
+    UserError.where(session_id: params[:session_id]).destroy_all
   end
 
   private
